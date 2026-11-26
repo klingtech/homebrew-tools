@@ -1,5 +1,5 @@
-# Template for the klingtech/homebrew-tools tap. The station-kit release stamps 1.0.0,
-# 7cabb8b19d53f6b4843217e3b5f855abaecfe3f6f1bd15d9a4b3e235ae5f6530 and https://fleet.klingworld.com/operator-api/v1/station-kit/1.0.0 and proposes the result to the tap; never edit the tap's copy by hand.
+# Template for the klingtech/homebrew-tools tap. The station-kit release stamps 1.0.1,
+# e5f9a8f779066fd886f674b80a9ed50b2e00259161bc1853fbac18873179256a and https://fleet.klingworld.com/operator-api/v1/station-kit/1.0.1 and proposes the result to the tap; never edit the tap's copy by hand.
 #
 # Fleet's Factory page hands a signed-in operator the command with a fresh 10-minute token:
 #   HOMEBREW_KLINGBOT_TOKEN=<token> brew install klingtech/tools/klingbot-station
@@ -7,10 +7,10 @@
 class KlingbotStation < Formula
   desc "Klingbot factory station: flashes and finishes Klingbots for the Fleet console"
   homepage "https://fleet.klingworld.com/"
-  url "https://fleet.klingworld.com/operator-api/v1/station-kit/1.0.0",
+  url "https://fleet.klingworld.com/operator-api/v1/station-kit/1.0.1",
       headers: ["X-Station-Kit-Token: #{ENV.fetch("HOMEBREW_KLINGBOT_TOKEN", "")}"]
-  version "1.0.0"
-  sha256 "7cabb8b19d53f6b4843217e3b5f855abaecfe3f6f1bd15d9a4b3e235ae5f6530"
+  version "1.0.1"
+  sha256 "e5f9a8f779066fd886f674b80a9ed50b2e00259161bc1853fbac18873179256a"
 
   depends_on "node"
   depends_on "open-ocd"
